@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selling Store</title>
+    <link rel="stylesheet" href="csssec.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+
+     <header>
+        <div class="logo">
+            <img src="Example.png" alt="Store Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html" class="tablink btn">Go back</a></li>
+                <li><button class="tablink btn" onclick="opentab('home')">Home</button></li>
+                <li><button class="tablink btn" onclick="openTab('products')">Products</button></li>
+                <li><button class="tablink btn" onclick="openTab('about')">About Us</button></li>
+                <li><button class="tablink btn" onclick="openTab('contact')">Contact</button></li>
+                <li><button class="tablink btn" onclick="openTab('cart')">Cart<span id="cartItemCount">0</span></button></li>
+                
+
+            </ul>
+        </nav>
+    </header>
+    <div class="tabs">
+        
+        <div id="home" class="tabcontent">
+            <section>
+                <div class="banner">
+                    
+                    <h1>Welcome to our store!</h1>
+                    <p>Here you will find everything you need!</p>
+                    <button class="tablink btn" onclick="openTab('products')">View Products</button>
+                </div>
+            </section>
+        </div>
+
+        <div id="products" class="tabcontent hide">
+            <section class="ret">
+                <div class="product">
+                    <div class="imgP">
+                        <img src="http://priroda.club/uploads/posts/2022-07/1658478016_13-priroda-club-p-krasivie-prirodnie-peizazhi-priroda-krasiv-13.jpg" alt="Product 1">
+                    </div>
+                    <h2>Product 1</h2>
+                    <p class="price">$19.99</p>
+                    <button class="btn" onclick="addToCart('Product 1', 19.99)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <div class="imgP">
+                        <img src="http://priroda.club/uploads/posts/2022-07/1658478016_13-priroda-club-p-krasivie-prirodnie-peizazhi-priroda-krasiv-13.jpg" alt="Product 1">
+                    </div>
+                    <h2>Product 1</h2>
+                    <p class="price">$19.99</p>
+                    <button class="btn" onclick="addToCart('Product 1', 19.99)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <div class="imgP">
+                        <img src="http://priroda.club/uploads/posts/2022-07/1658478016_13-priroda-club-p-krasivie-prirodnie-peizazhi-priroda-krasiv-13.jpg" alt="Product 1">
+                    </div>
+                    <h2>Product 1</h2>
+                    <p class="price">$19.99</p>
+                    <button class="btn" onclick="addToCart('Product 1', 19.99)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <div class="imgP">
+                        <img src="http://priroda.club/uploads/posts/2022-07/1658478016_13-priroda-club-p-krasivie-prirodnie-peizazhi-priroda-krasiv-13.jpg" alt="Product 1">
+                    </div>
+                    <h2>Product 1</h2>
+                    <p class="price">$19.99</p>
+                    <button class="btn" onclick="addToCart('Product 1', 19.99)">Add to Cart</button>
+                </div>
+            </section>
+        </div>
+
+        <div id="about" class="tabcontent hide">
+            <section>
+                <div class="about-info">
+                    <h2>About Us</h2>
+                    <p>Our store specializes in providing quality products at affordable prices.</p>
+                    <p>We aim to meet the needs of every customer and provide a pleasant shopping experience.</p>
+                </div>
+            </section>
+        </div>
+
+        <div id="contact" class="tabcontent hide">
+            <section>
+                <div class="contact-info">
+                    <h2>Contact Us</h2>
+                    <p>Phone: 123-456-789</p>
+                    <p>Email: info@example.com</p>
+                    <p>Address: 123 Sample St, Sample City</p>
+                </div>
+            </section>
+        </div>
+
+        <div id="cart" class="tabcontent hide">
+            <section>
+                <h2>Cart</h2>
+                <div id="cartItems">
+                    <!-- The list of items in the cart will be added here -->
+                </div>
+                <p id="totalPrice">Total: $0.00</p>
+                <button class="btn" onclick="clearCart()">Clear All</button>
+                <button class="btn" onclick="buyAll()">Checkout</button>
+            </section>
+        </div>
+    </div>    
+    <script src="javasec.js"></script>
+</body>
+</html>

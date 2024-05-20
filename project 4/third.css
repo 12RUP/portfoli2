@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h1 {
+    margin-top: 0;
+}
+
+input[type="text"] {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #007bff;
+    border-radius: 0;
+    background: transparent;
+    outline: none;
+    position: relative;
+}
+
+input[type="text"]::placeholder {
+    color: transparent;
+    animation: placeholderFadeIn 1s forwards;
+}
+
+input[type="text"]:focus::placeholder {
+    color: #ccc;
+}
+
+@keyframes placeholderFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: #0056b3;
+}
+
+.task-item {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.5s ease-in-out;
+}
+
+.task-item h3 {
+    margin-top: 0;
+}
+
+.task-item p {
+    margin-bottom: 5px;
+}
+
+.completed {
+    background-color: rgb(43, 170, 43);
+}
+
+.delete {
+    background-color: rgb(240, 13, 13);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.delete:hover {
+    background-color: rgb(181, 21, 21);
+}
+
+.complete {
+    background-color: rgb(29, 183, 29);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.complete:hover {
+    background-color: rgb(24, 138, 24);
+}
+.pressed{
+background-color: rgb(24, 138, 24);
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+.task-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+@keyframes deleteFadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.delete-animation {
+    animation: deleteFadeOut 0.5s forwards;
+}
+.a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none; /* Убираем подчеркивание */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: #0056b3;
+}
