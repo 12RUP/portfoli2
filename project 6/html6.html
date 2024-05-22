@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whack-a-Mole</title>
+  <link rel="stylesheet" href="styles6.css">
+</head>
+<body>
+  <h1>Whack-a-Mole</h1>
+  <div id="game">
+    <div class="hole"><div class="mole"></div></div>
+    <div class="hole"><div class="mole"></div></div>
+    <div class="hole"><div class="mole"></div></div>
+    <div class="hole"><div class="mole"></div></div>
+    <div class="hole"><div class="mole"></div></div>
+    <div class="hole"><div class="mole"></div></div>
+    <div class="hole"><div class="mole"></div></div>
+    <div class="hole"><div class="mole"></div></div>
+    <div class="hole"><div class="mole"></div></div>
+  </div>
+  <div class="scoreboard">
+    <span id="score">Score: 0</span>
+    <button id="startButton">Start Game</button>
+    <button id="time1" class="time-button active" data-time="30">30 sec</button>
+    <button id="time2" class="time-button" data-time="60">60 sec</button>
+    <button id="time3" class="time-button" data-time="10">10 sec</button>
+    <span id="timeLeft">Time left: 30s</span>
+  </div>
+
+  <!-- Modal -->
+  <div id="gameOverModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Game Over!</h2>
+      <p id="finalScore"></p>
+      <button id="playAgainButton">Play Again</button>
+    </div>
+  </div>
+
+  <script src="js6.js"></script>
+</body>
+</html>

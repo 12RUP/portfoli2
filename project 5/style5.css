@@ -1,0 +1,267 @@
+body {
+    background: linear-gradient(135deg, #74EBD5 0%, #9FACE6 100%);
+    color: #1c1c1e;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #007aff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0056b3;
+}
+
+.container {
+    max-width: 600px;
+    margin: 100px auto 40px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.container:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+h1 {
+    color: #007aff;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #007aff;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #007aff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+#weatherInfo {
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#weatherInfo h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #007aff;
+}
+
+.weather-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.weather-details p {
+    font-size: 18px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.weather-details p i {
+    margin-right: 10px;
+    color: #007aff;
+    font-size: 24px;
+}
+
+#forecast .forecast-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+#forecast .forecast-item:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+#forecast .forecast-item h3 {
+    margin: 0;
+    color: #007aff;
+    font-size: 20px;
+}
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #007aff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 99;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #007aff;
+}
+
+#history {
+    margin-top: 20px;
+}
+
+#history h3 {
+    font-size: 24px;
+    color: #007aff;
+}
+
+#history ul {
+    list-style: none;
+    padding: 0;
+}
+
+#history ul li {
+    font-size: 18px;
+    color: #333;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#history ul li:hover {
+    background-color: #f0f0f0;
+   
+}
+
+
+@media (max-width: 600px) {
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .container {
+        margin: 80px auto 20px;
+        padding: 15px;
+    }
+
+    input[type="text"] {
+        width: calc(100% - 70px);
+    }
+
+    button {
+        width: 70px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
